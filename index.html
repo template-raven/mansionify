@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansonify</title>
+  <link rel="stylesheet" href="./css/output.css">
+  <!-- Unncomment below for local development -->
+  <!-- <link rel="stylesheet" href="./css/owlcarousel.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #a24bf5;
+      border-radius: 15px;
+    }
+
+    /* Hamburger */
+    #hamburger .bar {
+      transition: transform 0.3s;
+    }
+
+    #hamburger.active .bar:nth-of-type(1) {
+      transform: rotate(45deg) translateY(2px) translateX(3px);
+    }
+
+    #hamburger.active .bar:nth-of-type(2) {
+      display: none;
+    }
+
+    #hamburger.active .bar:nth-of-type(3) {
+      transform: rotate(-45deg) translateX(4px) translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->?
+  <nav class="shadow-sm shadow-indigo-200 fixed top-0 z-20 w-full bg-white">
+    <div class="flex flex-col sm:flex-row flex-wrap md:items-center px-5 py-2 justify-between">
+
+      <div class="flex justify-between flex-wrap items-center">
+
+        <!-- This could be a text, image or both -->
+        <a href="#" class="py-1 flex font-bold items-center text-2xl">
+          Man<span class="text-primary">sionify</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="sm:hidden cursor-pointer flex flex-col justify-center gap-y-1" id="hamburger" aria-label="menu">
+          <div class="w-6 h-1 rounded-lg bg-black dark:bg-white bar"></div>
+          <div class="w-4 h-1 rounded-lg bg-black dark:bg-white bar"></div>
+          <div class="w-6 h-1 rounded-lg bg-black dark:bg-white bar"></div>
+        </button>
+
+      </div>
+
+
+      <ul class="hidden sm:flex flex-1 justify-end items-center gap-y-7 gap-x-8 text-md tracking-wide mt-5 sm:mt-0"
+        id="links">
+        <li class="table-caption decoration-primary hover:underline hover:text-primary underline-offset-8 mb-5 sm:mb-0">
+          <a href="#">Home</a>
+        </li>
+        <li class="table-caption decoration-primary hover:underline hover:text-primary underline-offset-8 mb-5 sm:mb-0">
+          <a href="#properties">Properties</a>
+        </li>
+        <li class="table-caption decoration-primary hover:underline hover:text-primary underline-offset-8 mb-5 sm:mb-0">
+          <a href="#about">About</a>
+        </li>
+        <li class="text-white underline-offset-8 mb-5 sm:mb-0 mx-0">
+          <a href="#contact" class="bg-primary px-4 py-2 rounded-lg font-bold hover:opacity-80">Contact Us</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <header class="lg:mb-40 lg:mt-36">
+      <div class="flex flex-col lg:flex-row items-center gap-12 mt-28 lg:mt-35 mx-auto lg:pl-5">
+        <!-- content -->
+        <div class="flex flex-1 flex-col items-center lg:items-start">
+          <h1 class="font-bold text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">Find a <span
+              class="text-primary">Mansion</span> that is perfect for you
+          </h1>
+          <p class="text-lg text-center lg:text-left mx-1 sm:mx-0 mb-6 py-2"> We provide a complete sale, purchase or
+            rental of real estate.</p>
+          <div class="flex justify-center flex-wrap gap-6">
+            <!-- Links -->
+            <a href="#contact"
+              class="py-3 px-5 rounded-lg transition duration-300 font-bold border-2 border-primary text-white bg-primary hover:opacity-80">Get
+              Started</a>
+            <a href="#projects"
+              class="py-3 px-5 rounded-lg text-black transition duration-300 font-bold border border-primary hover:text-white hover:bg-primary hover:opacity-80 hover:border-primary">Explore</a>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 lg:pr-3">
+          <img src="./img/mansion1.avif" class="w-full  border-2 border-indigo-300 rounded-xl" loading="lazy">
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Cards -->
+    <section class="mb-28 mt-32 px-5">
+      <div class="flex flex-wrap justify-around gap-y-14">
+
+        <!-- First Card -->
+        <div
+          class="relative flex flex-col gap-3 bg-white text-center border border-gray-300 shadow-md p-3 sm:mx-3 rounded-xl w-full sm:w-2/5 lg:w-1/4">
+          <h1 class="text-2xl font-bold pt-5">Buy a Mansion</h1>
+          <p class="text-gray-600">With 1 million+ homes at our disposal, you will find a mansion you will call home.
+          </p>
+          <a href="#" class="px-3 py-2 mt-2 bg-primary mx-auto text-white font-bold rounded hover:opacity-90">Find A
+            Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 text-4xl absolute -top-8 left-[42%] rounded-lg p-2 fill-primary" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </div>
+        <!-- Second Card -->
+        <div
+          class="relative flex flex-col gap-3 bg-primary text-center border border-gray-300 shadow-md p-3 sm:mx-3 rounded-xl w-full sm:w-2/5 lg:w-1/4">
+          <h1 class="text-2xl font-bold pt-5 text-white">Rent a Mansion</h1>
+          <p class="text-slate-200">With 35+ fillters and custom keyword search, mansion can help you find the one
+            you'll
+            love.</p>
+          <a href="#" class="px-3 py-2 mt-2 bg-white mx-auto text-black font-bold rounded hover:opacity-90">Find A
+            Rental</a>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-16 absolute -top-8 left-[42%] bg-white text-primary rounded-lg p-2 border border-gray-400"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <!-- <span
+            class="absolute -top-8 left-[42%] bg-white text-primary rounded-lg p-2"></span> -->
+        </div>
+
+        <!-- Third Card -->
+        <div
+          class="relative flex flex-col gap-3 bg-white text-center border border-gray-300 shadow-md p-3 sm:mx-3 rounded-xl w-full sm:w-2/5 lg:w-1/4">
+          <h1 class="text-2xl font-bold pt-5">Neighbourhood</h1>
+          <p class="text-gray-600">We will give you a mansion in a neighbourhood that right for you.</p>
+          <a href="#" class="px-3 py-2 mt-2 bg-primary mx-auto text-white font-bold rounded hover:opacity-90">Learn
+            More</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 fill-primary absolute -top-8 left-[42%] rounded-lg p-2" viewBox="0 0 20 20" >
+              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+            </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="mb-28 pt-32" id="about">
+      <!-- Heading -->
+      <div class="text-center">
+        <h1 class="font-bold text-2xl md:text-4xl mb-3">Why Choose Us?</h1>
+        <p class="text-slate-700">We provide full service at every step.</p>
+      </div>
+      <!-- Cards -->
+      <div class="flex flex-wrap gap-x-1 gap-y-4 sm:gap-y-2 justify-around mt-10 text-center">
+
+        <div
+          class="flex flex-col items-center justify-around sm:bg-white py-3 px-0 rounded-lg sm:border border-gray-300 w-full sm:w-1/3 h-32 lg:w-1/5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 fill-primary" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd" />
+          </svg>
+          <h2 class="text-xl font-bold">Trusted By Thousands</h2>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-around sm:bg-white py-3 px-5 rounded-lg sm:border border-gray-300 w-full sm:w-1/3 h-32 lg:w-1/5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 fill-primary" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+          </svg>
+          <h2 class="text-xl font-bold">Wide Range Of Properties</h2>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-around sm:bg-white py-3 px-5 rounded-lg sm:border border-gray-300 w-full sm:w-1/3 h-32 lg:w-1/5">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 fill-primary" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+          </svg>
+          <h2 class="text-xl font-bold">Favourable Weather</h2>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-around sm:bg-white py-3 px-5 rounded-lg sm:border border-gray-300 w-full sm:w-1/3 h-32 lg:w-1/5">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 fill-primary" viewBox="0 0 24 24" stroke="white" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <h2 class="text-xl font-bold">Good Location</h2>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="mb-28 mt-10 pt-20" id="properties">
+      <!-- Heading -->
+      <div class="text-center">
+        <h1 class="font-bold text-2xl md:text-4xl mb-3">Featured Properties</h1>
+        <p class="text-slate-700">Browse our latest offers.</p>
+      </div>
+
+      <!-- The Carousel -->
+      <div class="owl-carousel">
+
+        <!-- First Item -->
+        <div
+          class="bg-white mt-10 mb-5 mx-2 flex flex-row-reverse flex-wrap justify-end lg:flex-nowrap gap-y-5 gap-x-1 lg:items-center border border-gray-400 rounded-lg shadow-lg shadow-gray-300 md:w-3/4 md:mx-auto lg:w-full">
+          <div class="w-full lg:w-2/3 rounded-tr-lg rounded-br-lg relative">
+            <img src="./img/mansion1.avif" alt=""
+              class="w-full rounded-tl-lg rounded-tr-lg lg:rounded-tl-none lg:rounded-br-lg" loading="lazy">
+          </div>
+
+          <div class="w-full lg:w-3/5">
+            <div class="pb-4 px-3 py-3">
+              <h2 class="font-bold text-2xl mb-3 md:mb-5">La Monique</h2>
+              <p>This mansion rests on the river side in <span class="bg-yellow-200">Roma, Italy.</span></p>
+              <p class="font-semibold mt-3">$110,000</p>
+            </div>
+
+            <button
+              class="px-3 py-2 sm:px-5 sm:py-2 sm:text-xl sm:mx-auto sm:block sm:mb-4 lg:ml-3 bg-primary text-white w-full sm:w-auto hover:opacity-90 rounded-sm sm:rounded-md font-semibold outline-0">Buy
+              Now</button>
+          </div>
+
+        </div>
+        <!-- Second Item -->
+        <div
+          class="bg-white mt-10 mb-5 mx-2 flex flex-row-reverse flex-wrap justify-end lg:flex-nowrap gap-y-5 gap-x-1 lg:items-center border border-gray-400 rounded-lg shadow-lg shadow-gray-300 md:w-3/4 md:mx-auto lg:w-full">
+          <div class="w-full lg:w-2/3 rounded-tr-lg rounded-br-lg relative">
+            <img src="./img/mansion2.avif" alt=""
+              class="w-full rounded-tl-lg rounded-tr-lg lg:rounded-tl-none lg:rounded-br-lg" loading="lazy">
+          </div>
+
+          <div class="w-full lg:w-3/5">
+            <div class="pb-4 px-3 py-3">
+              <h2 class="font-bold text-2xl mb-3 md:mb-5">La Monique</h2>
+              <p>This mansion rests on the river side in <span class="bg-yellow-200">Roma, Italy.</span></p>
+              <p class="font-semibold mt-3">$110,000</p>
+            </div>
+
+            <button
+              class="px-3 py-2 sm:px-5 sm:py-2 sm:text-xl sm:mx-auto sm:block sm:mb-4 lg:ml-3 bg-primary text-white w-full sm:w-auto hover:opacity-90 rounded-sm sm:rounded-md font-semibold outline-0">Buy
+              Now</button>
+          </div>
+
+        </div>
+        <!-- Third Item -->
+        <div
+          class="bg-white mt-10 mb-5 mx-2 flex flex-row-reverse flex-wrap justify-end lg:flex-nowrap gap-y-5 gap-x-1 lg:items-center border border-gray-400 rounded-lg shadow-lg shadow-gray-300 md:w-3/4 md:mx-auto lg:w-full">
+          <div class="w-full lg:w-2/3 rounded-tr-lg rounded-br-lg relative">
+            <img src="./img/mansion3.avif" alt=""
+              class="w-full rounded-tl-lg rounded-tr-lg lg:rounded-tl-none lg:rounded-br-lg" loading="lazy">
+          </div>
+
+          <div class="w-full lg:w-3/5">
+            <div class="pb-4 px-3 py-3">
+              <h2 class="font-bold text-2xl mb-3 md:mb-5">La Monique</h2>
+              <p>This mansion rests on the river side in <span class="bg-yellow-200">Roma, Italy.</span></p>
+              <p class="font-semibold mt-3">$110,000</p>
+            </div>
+
+            <button
+              class="px-3 py-2 sm:px-5 sm:py-2 sm:text-xl sm:mx-auto sm:block sm:mb-4 lg:ml-3 bg-primary text-white w-full sm:w-auto hover:opacity-90 rounded-sm sm:rounded-md font-semibold outline-0">Buy
+              Now</button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mb-28 mt-32">
+
+      <!-- Heading -->
+      <div class="text-center">
+        <h1 class="font-bold text-2xl md:text-4xl mb-3">Testimonials</h1>
+        <p class="text-slate-700">See testimonials and Reviews</p>
+      </div>
+
+      <!-- Bill Gate -->
+      <div
+        class="bg-white mt-7 mb-5 mx-2 flex flex-wrap lg:flex-nowrap gap-5 lg:items-center md:w-3/4 lg:w-full ml-auto mr-auto border border-gray-300 rounded-lg shadow-lg">
+        <div class="w-full lg:w-3/5 relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[4%] rounded-md sm:bottom-3 py-2 bg-black/30 w-11/12 backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Bill Gate</h1>
+              <p class="text-xs text-gray-200">CEO Microsoft Inc.</p>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="py-4 px-3">
+          <p class="my-2">Mansionify is a fantastic real estate agency. They did an amazing with my house in a very
+            short
+            timeframe. They were supportive in the lead, up to the sale.</p>
+          <p class="my-2">Assisting in many different areas. The actual sales process was executed in a very
+            professional
+            manner.</p>
+
+          <!-- Stars -->
+          <div class="mt-5 flex">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- People Cards -->
+      <div class="grid md:grid-cols-2 mt-10 gap-x-4 gap-y-9 px-3">
+
+        <!-- Person 1 -->
+        <div class="p-5 bg-white border border-slate-300 shadow-lg rounded-lg">
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/men/83.jpg" alt="avatar1"
+              class="w-16 h-16 lg:w-20 lg:h-20 rounded-full border border-slate-300">
+            <div class="ml-3">
+              <h2 class="font-bold text-xl">Ben Smith</h2>
+              <p class="text-gray-600">Lead Designer - <em>Google</em></p>
+            </div>
+          </div>
+
+          <div class="py-4 px-2">
+            <p>Mansionify is a fantastic real estate company. They did an amazing job with my house in a very short
+              time.
+            </p>
+
+            <div class="mt-5 flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Person 2 -->
+        <div class="p-5 bg-white border border-slate-300 shadow-lg rounded-lg">
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="avatar2"
+              class="w-16 h-16 lg:w-20 lg:h-20 rounded-full border border-slate-300">
+            <div class="ml-3">
+              <h2 class="font-bold text-xl">Rosa Will</h2>
+              <p class="text-gray-600">Writer - <em>Medium</em></p>
+            </div>
+          </div>
+
+          <div class="py-4 px-2">
+            <p>They were very supportive in the sale of my mansion, assisting me in many different ways.</p>
+
+            <div class="mt-5 flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="p-5 bg-white border border-slate-300 shadow-lg rounded-lg">
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="avatar3"
+              class="w-16 h-16 lg:w-20 lg:h-20 rounded-full border border-slate-300">
+            <div class="ml-3">
+              <h2 class="font-bold text-xl">Jane Jackson</h2>
+              <p class="text-gray-600">CTO - <em>AirBNB</em></p>
+            </div>
+          </div>
+
+          <div class="py-4 px-2">
+            <p>I bought the mansion I am currently living for over ten years at <em>Mansionify</em>, and I've had no
+              cause for alarm.</p>
+
+            <div class="mt-5 flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
+        <!-- Person 4 -->
+        <div class="p-5 bg-white border border-slate-300 shadow-lg rounded-lg">
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="avatar4"
+              class="w-16 h-16 lg:w-20 lg:h-20 rounded-full border border-slate-300">
+            <div class="ml-3">
+              <h2 class="font-bold text-xl">Tom Gary</h2>
+              <p class="text-gray-600">General Manger - <em>Dangote Group</em></p>
+            </div>
+          </div>
+
+          <div class="py-4 px-2">
+            <p>Nothing was too much trouble. Highly recommended. Thanks again Mansionify.</p>
+
+            <div class="mt-5 flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-yellow-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Agents -->
+    <section class="mb-28 mt-32">
+      <!-- Heading -->
+      <div class="text-center">
+        <h1 class="font-bold text-2xl md:text-4xl mb-3">Agents</h1>
+        <p class="text-slate-700">Meet Our Agents from all over the world.</p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 px-5 mt-10 gap-x-7 gap-y-9" id="agents-cont">
+
+        <!-- Person 1 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">John Snow</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Person 2 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Major John</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Mark Donalds</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Person 4 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Bruce Lee</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Person 5 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Carl Benz</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Person 6 -->
+        <div class="w-full relative">
+          <img src="./img/bill gate.webp" alt="bill gate" class="w-full rounded-md" loading="lazy">
+          <!-- Absolute -->
+          <div
+            class="absolute bottom-1 left-[2.5%] rounded-md sm:bottom-3 py-2 bg-black/30 w-[95%] backdrop-blur-md flex flex-wrap items-center justify-between px-5">
+            <div>
+              <h1 class="font-bold text-2xl text-white">Barry Allen</h1>
+            </div>
+
+            <div class="flex gap-x-7 text-2xl text-white">
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 fill-white">
+                  <path
+                    d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+                </svg>
+              </a>
+              <a href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-8 fill-white">
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+
+    </section>
+
+    <!-- Contact Us -->
+    <div class="pt-20" id="contact"></div>
+    <section class="bg-[url('../img/mansion3.avif')] bg-no-repeat bg-black/50 bg-cover bg-blend-color py-10">
+      <!-- Heading -->
+      <div class="text-center mb-5 text-white">
+        <h1 class="font-bold text-2xl md:text-4xl mb-3">Contact Us</h1>
+        <p class="text-slate-300">Contact us if you will like to buy/sell mansion(s) or if you will just like to make an
+          enquiry.</p>
+      </div>
+
+      <form action="">
+
+        <div class="grid md:grid-cols-2 items-center">
+          <div>
+            <input type="text" name="name" placeholder="Your Name *"
+              class="block my-4 mx-auto h-16 w-4/5 p-5 rounded-lg outline-0 placeholder:font-bold placeholder:font-sans font-mono">
+            <input type="email" name="email" placeholder="Your Email *"
+              class="block my-4 mx-auto h-16 w-4/5 p-5 rounded-lg outline-0 placeholder:font-bold placeholder:font-sans font-mono">
+            <input type="tel" name="phone" placeholder="Your Phone *"
+              class="block my-4 mx-auto h-16 w-4/5 p-5 rounded-lg outline-0 placeholder:font-bold placeholder:font-sans font-mono">
+          </div>
+
+          <textarea name="message" placeholder="Your Message *"
+            class="w-4/5 h-60 mx-auto rounded-lg outline-0 p-4 placeholder:font-bold placeholder:font-sans font-mono"></textarea>
+        </div>
+
+        <button type="submit"
+          class="mx-auto block mt-7 bg-primary hover:opacity-90 text-white rounded-md py-3 px-4 font-semibold h-16 text-lg">Send
+          Message</button>
+
+      </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 pb-3 pt-20 text-white">
+
+      <div class="flex flex-wrap justify-around gap-y-16 gap-x-7 mb-16">
+
+        <!-- Contact -->
+        <div class="text-left mx-10 lg:mx-16 mb-5">
+          <h2 class="font-bold text-2xl mb-6 tracking-wider">Man<span class="text-primary">sionify</span></h2>
+          <p>167 Primrose Lane</p>
+          <p>Oxford, Wisconsin</p>
+          <div class="flex flex-wrap gap-x-7 text-3xl mt-5">
+            <a href="#!" class="hover:opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 fill-primary">
+                <path
+                  d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z" />
+              </svg>
+            </a>
+            <a href="#!" class="hover:opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 fill-primary" viewBox="0 0 24 24">
+                <path
+                  d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z" />
+              </svg>
+            </a>
+            <a href="#!" class="text-primary hover:opacity-90">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="w-10 fill-primary">
+                <path
+                  d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Comparison -->
+        <div class="mx-10 lg:mx-16">
+          <h2 class="font-bold text-xl mb-4">Comparison</h2>
+          <ul class="flex flex-col items-start gap-y-2 text-left font-semibold">
+            <li><a href="#!" class="hover:text-primary">Why Choose Us</a></li>
+            <li><a href="#!" class="hover:text-primary">About Us</a></li>
+            <li><a href="#!" class="hover:text-primary">Features</a></li>
+            <li><a href="#!" class="hover:text-primary">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Solution -->
+        <div class="mx-10 lg:mx-16">
+          <h2 class="font-bold text-xl mb-4">Solutions</h2>
+          <ul class="flex flex-col items-start gap-y-2 text-left font-semibold">
+            <li><a href="#!" class="hover:text-primary">Company</a></li>
+            <li><a href="#!" class="hover:text-primary">Enterprise</a></li>
+            <li><a href="#!" class="hover:text-primary">Roadmap</a></li>
+            <li><a href="#!" class="hover:text-primary">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="mx-10 lg:mx-16">
+          <h2 class="font-bold text-xl mb-4">Resources</h2>
+          <p>The latest news, articles and resources sent to your inbox every month.</p>
+
+          <form action="" class="mt-5 flex">
+            <input type="email" class="bg-slate-800 outline-0 py-2 px-3 rounded-tl rounded-bl w-full"
+              placeholder="Enter email here...">
+            <button type="submit"
+              class="bg-primary px-2 font-semibold rounded-tr rounded-br hover:opacity-90">Subscribe</button>
+
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-center mt-4 mb-8 font-semibold">Mansionify - Copyright &copy; <span id="year"></span>. All Rights
+        Reserved</p>
+      <!-- Sub Footer -->
+      <div class="h-1 w-full bg-gradient-to-r from-primary to-purple-500 "></div>
+      <p class="mb-2 mt-6 text-center">Built With
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-red-600 inline-block" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+            clip-rule="evenodd" />
+        </svg>
+        by <a href="https://github.com/template-raven" target="_blank" rel="noopener noreferrer"
+          class="text-indigo-400 hover:underline">TRaven</a> and inspired by <a
+          href="https://www.behance.net/gallery/140348617/Real-Estate-Web-Landing-Page-Ui-Design-Template"
+          target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Rizwan</a>
+      </p>
+
+    </footer>
+
+  </main>
+  <!-- Unncomment below for local development -->
+  <!-- <script src="./js/jquery.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Unncomment below for local development -->
+  <!-- <script src="./js/owl.carousel.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>
